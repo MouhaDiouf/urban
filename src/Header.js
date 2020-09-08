@@ -5,7 +5,7 @@ import './Header.css';
 function Header() {
   return (
     <div className="header">
-      <img src={logo} alt="Logo" />
+      <img src={logo} className="header__logo" alt="Logo" />
       <div className="header__search">
         <input className="header__searchInput" type="text" />
       </div>
