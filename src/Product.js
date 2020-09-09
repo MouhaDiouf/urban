@@ -14,11 +14,10 @@ function Product({}) {
         <div className="product__rating">
           <p>⭐</p>
           <p>⭐</p>
-          <p>⭐</p>
-          <p>⭐</p>
         </div>
       </div>
       <img src={lean} alt="lean startup" />
+      <button>Add to Basket</button>
     </div>
   );
 }
