@@ -40,15 +40,25 @@ function Home() {
             title="Echo Studio (Charcoal) with Amazon Smart Plug"
             image="https://images-na.ssl-images-amazon.com/images/I/612TnHGeiQL._AC_SL1000_.jpg"
             rating={5}
+            price={89}
           />
           <Product
             id="33255690"
             title="Apple iPad (10.2-inch, Wi-Fi, 128GB) - Space Gray (Latest Model)"
             image="https://images-na.ssl-images-amazon.com/images/I/6162WMQWhVL._AC_SL1500_.jpg"
             rating={5}
+            price={199}
           />
         </div>
-        <div className="home__row">{/* Product */}</div>
+        <div className="home__row">
+          <Product
+            id="34422089"
+            title="New Apple MacBook Pro (16-inch, 16GB RAM, 512GB Storage, 2.6GHz Intel Core i7) - Space Gray"
+            image="https://images-na.ssl-images-amazon.com/images/I/71pC69I3lzL._AC_SL1500_.jpg"
+            price={2099.0}
+            rating={4}
+          />
+        </div>
       </div>
     </div>
   );
