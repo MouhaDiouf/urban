@@ -4,6 +4,13 @@
   background-color: white;
   height: max-content;
 }
+
+.checkout__baskets {
+  display: flex;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 .checkout__ad {
   width: 100%;
   margin-bottom: 10px;
