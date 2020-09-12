@@ -6,10 +6,11 @@ import { auth } from './firebase';
 function Login() {
   const history = useHistory();
   const signIn = (e) => {
+    e.preventDefault();
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
-        history.push('./');
+        history.push('/');
       })
       .catch((error) => alert(error.message));
   };
@@ -18,8 +19,9 @@ function Login() {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
+        console.log('hello');
         if (auth) {
-          history.push('./');
+          history.push('/');
         }
       })
       .catch((error) => alert(error.message));
