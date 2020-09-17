@@ -42,6 +42,9 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
+          <Route paht="/payment">
+            <h1>I am the payment route</h1>
+          </Route>
 
           <Route path="/">
             <Header />
