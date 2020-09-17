@@ -43,7 +43,7 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route paht="/payment">
+          <Route path="/payment">
             <Payment />
           </Route>
 
