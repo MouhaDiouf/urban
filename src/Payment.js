@@ -7,6 +7,7 @@ import './Payment.css';
 import { getBasketTotal } from './reducer';
 import { useStateValue } from './StateProvider';
 import axios from './axios';
+import { db } from './firebase';
 
 function Payment() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -18,6 +19,7 @@ function Payment() {
   const [processing, setProcessing] = useState(false);
   const [clientSecret, setClientSecret] = useState(true);
   const history = useHistory();
+
   useEffect(() => {
     //generate the special stripe secret to charge the customer
     const getClientSecret = async () => {
@@ -41,6 +43,15 @@ function Payment() {
         },
       })
       .then(({ paymentIntent }) => {
+        db.collection('users')
+          .doc(user?.uid)
+          .collection('orders')
+          .doc(paymentIntent.id)
+          .set({
+            basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
         setSucceeded(true);
         setError(null);
         setProcessing(false);
